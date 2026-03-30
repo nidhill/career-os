@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      pdf_template: {
+        Row: {
+          id: string
+          sections: Json
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          sections?: Json
+          title?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          sections?: Json
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      registrations: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          name: string
+          phone: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          phone: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          phone?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
