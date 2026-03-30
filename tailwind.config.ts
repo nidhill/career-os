@@ -87,5 +87,9 @@ export default {
       },
     },
   },
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    },
+  },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
