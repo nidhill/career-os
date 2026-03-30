@@ -21,7 +21,7 @@ const PdfTemplateEditor = () => {
       if (data) {
         setTemplateId(data.id);
         setTitle(data.title);
-        setSections(data.sections as PdfSection[]);
+        setSections(data.sections as unknown as PdfSection[]);
       }
       setLoading(false);
     };

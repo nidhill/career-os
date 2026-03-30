@@ -60,7 +60,7 @@ const RegistrationsTable = () => {
       .limit(1)
       .single();
     const title = template?.title || "Career OS — Your Playbook";
-    const sections: PdfSection[] = (template?.sections as PdfSection[]) || [];
+    const sections: PdfSection[] = (template?.sections as unknown as PdfSection[]) || [];
     const doc = generateCareerPdf(reg.name, title, sections);
     doc.save(`Career-OS-${reg.name.replace(/\s+/g, "-")}.pdf`);
     toast.success(`PDF generated for ${reg.name}`);

@@ -38,7 +38,7 @@ const Index = () => {
         .single();
 
       const title = template?.title || "Career OS — Your Playbook";
-      const sections: PdfSection[] = (template?.sections as PdfSection[]) || [
+      const sections: PdfSection[] = (template?.sections as unknown as PdfSection[]) || [
         { heading: "Introduction", body: "Welcome to Career OS.", visible: true },
       ];
 
