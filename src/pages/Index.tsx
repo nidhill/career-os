@@ -78,13 +78,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
-      <div className="w-full max-w-2xl flex flex-col items-center gap-10">
-        {/* Logo */}
-        <p className="self-start text-xs font-light tracking-widest text-foreground/60 uppercase">
-          RizMango
-        </p>
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 relative">
+      {/* Logo */}
+      <p className="absolute top-6 left-6 sm:top-8 sm:left-10 text-xs font-light tracking-widest text-foreground/60 uppercase">
+        RizMango
+      </p>
 
+      <div className="w-full max-w-2xl flex flex-col items-center gap-10">
         {/* Title */}
         <h1 className="text-6xl sm:text-8xl font-black text-center leading-none tracking-tight">
           Career OS
